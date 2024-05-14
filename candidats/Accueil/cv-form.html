@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Mon CV</title>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="../../recruteur/Accueil/style_prem.css">
+        <link rel="stylesheet" href="style_cv.css">
+        <link rel="icon" href="../../img/JOBNET.png" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap"
+            rel="stylesheet"
+    />
+    </head>
+    <body>
+        <div class="nav-container">
+            <nav>
+                <div class="user">
+                    <img id="usernavimage" src="../../img/icon_profile.png" alt="user icon">
+                    <div class="name_id">
+                        <div id="nomcomplet"><?php echo"{$nom} {$prenom}";?></div>
+                        <div id="iduser"><label for="id"><?php echo "#{$id}";?></label></div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <a href="profile.php"><button>
+                        <img src="../../img/icon_profile.png" class="buttonimg">
+                        <label for="Profile">Profile</label>
+                    </button>
+                    </a>
+                    <a href="annoncesPart2.php">
+                        <button>
+                        <img src="../../img/portfolio.png" class="buttonimg">
+                        <label for="Annonces">Les offres</label>
+                    </button>
+                    </a>
+                    <a href="cv.php"><button id="selected">
+                        <img src="../../img/doc.png" class="buttonimg">
+                        <label for="Profile">mon CV</label>
+                    </button>
+                    </a>
+                    <a href="messagesAcceuil.php"><button>
+                        <img src="../../img/chat.png" class="buttonimg">
+                        <label for="Profile">Messages</label>
+                    </button>
+                    </a>
+                </div>
+            </nav>
+        </div>
+        <main>
+            <div class="container">
+                <form id="cvPdf" method="post" action="" enctype="multipart/form-data" name="cvPdf">
+                            <div id="titre">
+                                <h3>REMPLIRE LE FORMULAIRE</h3>
+                                    <div class="mb-3">
+                                        <label for="pdf_file">Choisir votre fichier PDF</label>
+                                        <input type="file" name="pdf_file" placeholder="Select a PDF file">
+                                    </div>
+                            </div>        
+                        <input type="submit" name="pdfUpload" class="btn btn-warning" value="Remplire la formulaire">
+                </form>
+                <form name="cvFormulaire" id="form" method="post" action="Cv-inserter.php">
+                    <section id="info">
+                        <p>Informations personelles</p>
+                        <div id="div1" class="mcontainer">
+                            <div>
+                                <label for="profession">Profession</label><br>
+                                <input id="profession" type="text" class="info" name="profession" value="<?php echo $profession; ?>" >
+                            </div>
+                            <div>
+                                <label for="formation">Domaine</label><br>
+                                <input id="domaine" type="text" class="info" name="domaine" value="<?php echo $domaine; ?>" >
+                            </div>
+                            <div>
+                                <label for="etablissement">Etablissement</label><br>
+                                <input id="etablissement" type="text" class="info" name="etablissement" value="<?php echo $etablissement; ?>" >
+                            </div>
+                        </div>
+                    </section>
+                    <section id="diplome">
+                        <p>Diplomes</p>
+                        <div class="mcontainer" id="diplomeBlock">
+                            <div>
+                                <label for="nom-diplome">Nom de diplome</label><br>
+                                <input type="text" class="info" name="diplomeName[]" value="<?php echo $diplomeName; ?>" >
+                            </div>
+                            <div>
+                                <label for="anne-dip">Année de diplome</label><br>
+                                <select id="anne" class="info" name="diplomeDuree[]" value="<?php echo $diplomeDuree; ?>" >
+                                    <option value="1" disabled selected>Choisir une durée</option>
+                                    <option value="2"> une année</option>
+                                    <option value="3">2 ans</option>
+                                    <option value="4">3 ans</option>
+                                    <option value="5">4 ans</option>
+                                </select>
+                            </div>
+                        </div>
+                    </section>
+                    <button type="button" id="buttonDiplome" onclick="addSection('diplome','diplomeBlock','buttonDiplome')">Ajouter Diplome</button>
+                    
+                    <section id="stage">
+                        <p>Stages</p>
+                        <div class="mcontainer" id="stageBlock">
+                            <div>
+                                <label for="nom-stage">Nom de stage</label><br>
+                                <input type="text" class="info" name="nomStage[]" value="<?php echo $nomStage; ?>" >
+                            </div>
+                            <div>
+                                <label for="duree">Durée</label><br>
+                                <select name="stageDuree[]" id="duree-stage" class="info" value="<?php echo $stageDuree; ?>" >
+                                    <option value="1" disabled selected>Choisir une durée</option>
+                                    <option value="2">2 mois</option>
+                                    <option value="3">3 mois</option>
+                                    <option value="4">4 mois</option>
+                                    <option value="5">6 mois</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="Entreprise">Entreprise</label><br>
+                                <input type="text" class="info" name="entrepriseStage[]" value="<?php echo trim($entrepriseStage); ?>">
+                            </div>
+                            <div>
+                                <label for="sujet">Sujet</label><br>
+                                <input type="text" class="info" name="sujet[]" value="<?php echo $sujet; ?>" >
+                            </div>
+                        </div>
+                    </section>
+                    <button type="button" id="buttonStage" onclick="addSection('stage','stageBlock','buttonStage')">Ajouter Stage</button>
+                    
+                    <section id="experience-pro">
+                        <p>Expériences professionnelles</p>
+                        <div class="mcontainer" id="experienceProBlock">
+                            <div>
+                                <label for="poste">Poste</label><br>
+                                <input type="text" class="info" name="poste[]" value="<?php echo $poste; ?>" >
+                            </div>
+                            <div>
+                                <label for="duree">Durée</label><br>
+                                <select name="dureeEx[]" id="duree-stage" class="info" value="<?php echo $dureeEx; ?>" >
+                                    <option value="1" disabled selected>Choisir une durée</option>
+                                    <option value="2">une année</option>
+                                    <option value="3">2 années</option>
+                                    <option value="4">3 années</option>
+                                    <option value="5">4 années</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="Entreprise">Entreprise</label><br>
+                                <input type="text" class="info" name="entrepriseExp[]" value="<?php echo $entrepriseExp; ?>" >
+                            </div>
+                        </div>
+                    </section>
+                    <button type="button" id="buttonExperiencePro" onclick="addSection('experience-pro','experienceProBlock','buttonExperiencePro')">Ajouter Expérience Professionnelle</button>
+                    
+                    <section id="certificats">
+                        <p>Cértifications</p>
+                        <div class="mcontainer" id="certificatsBlock">
+                            <div>
+                                <label for="nom-certif">Nom de certificat</label><br>
+                                <input type="text" class="info" name="certifNom[]" value="<?php echo $certifNom; ?>" >
+                            </div>
+                        </div>
+                    </section>
+                    <button type="button" id="buttonCertificats" onclick="addSection('certificats','certificatsBlock','buttonCertificats')">Ajouter Certificat</button>
+                    
+                    <section id="interet">
+                        <p>Autres</p>
+                        <div class="mcontainer" id="interetBlock">
+                            <div>
+                                <label for="interet">Interet</label><br>
+                                <input type="text" class="info" name="interet[]" value="<?php echo $interet; ?>" >
+                            </div>  
+                        </div>    
+                    </section>
+                    <button type="button" id="buttonInteret" onclick="addSection('interet','interetBlock','buttonInteret')">Ajouter Autre</button>                    
+                    <div>
+                        <button class="submitForm" type="submit" name="cvFormulaire" id="submit" onclick="sendCv()"><?php echo $formButton; ?></button>
+                    </div>
+                 </form>
+            </div>     
+        </main>
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+        <script src="cv.js"></script>
+    </body>
+</html>

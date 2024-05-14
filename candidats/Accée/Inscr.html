@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JOBNET</title>
+    <link rel="stylesheet" href="inscr.css" />
+    <link rel="icon" href="../../img/JOBNET.png" />
+</head>
+<body>
+    <div>
+        <div class="block">
+            <h2>JOBNET<b>CANDIDAT</b></h2>
+            <h3>S’inscrire</h3>
+            <form method="POST" action="../../backend/Insc.php">
+                <table>
+                    <tr>
+                        <td>
+                            <label>Nom</label><br>
+                            <input type="text" name="Nom" placeholder="Entrez votre nom" required>
+                        </td>
+                        <td class="sexe" id="space"><input type="radio" id="Male" value="Male" name="sexe" required></td>
+                        <td class="sexe"><label>Male</label></td>
+                        <td class="sexe"><input type="radio" id="Female" value="Female" name="sexe"></td>
+                        <td class="sexe"><label>Female</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Prénom</label><br>
+                            <input type="text" name="Prenom" placeholder="Entrez votre prénom" required>
+                        </td>
+                        <td class="right">
+                            <label>Date de naissance</label><br>
+                            <input type="date" name="Datedenaissance" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Téléphone</label><br>
+                            <input type="tel" name="telephone" placeholder="0612345678" required>
+                        </td>
+                        <td class="right">
+                            <label>Adresse</label><br>
+                            <input type="text" name="Adresse" placeholder="Entrez votre adresse">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Email</label><br>
+                            <input type="email" name="Email" placeholder="username@gmail.com" required>
+                        </td>
+                        <td class="right">
+                            <label>Ville</label><br>
+                            <input type="text" name="Ville" placeholder="Ville où vous habitez">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Mot de passe</label><br>
+                            <input type="password" id="Password" name="Password" placeholder="Entrez votre mot de passe" required>
+                            <span id="passwordE"></span>
+                        </td>
+                        <td class="right">
+                            <label>Confirmer Mot de passe</label><br>
+                            <input type="password" id="ConfPassword" name="ConfPassword" placeholder="Confirmez votre mot de passe" onblur="validateForm()" required>
+                            <span id="passwordError" class="error"></span>
+                        </td>
+                    </tr>
+                </table>
+                <input type="hidden" name="type" value="candidat">
+                <button id="inscrire" type="submit" name="inscripCandidats">S’inscrire</button>
+                <p>Vous avez un compte? <a id="Inscrivez-vous" href="Log-in.html">Connectez-vous</a></p>
+            </form>
+        </div>
+    </div>
+    <script src="insc.js"></script>
+    <script>
+        window.onload = function() {
+            var urlParams = new URLSearchParams(window.location.search);
+            var message = urlParams.get('message');
+            
+            if (message) {
+                alert(message);
+            }
+        };
+    </script>
+</body>
+</html>

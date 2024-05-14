@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="../../recruteur/Accueil/style_prem.css">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="icon" href="../../img/JOBNET.png" />
+</head>
+<body>
+    <div class="nav-container">
+        <nav>
+            <div class="user">
+                <img id="usernavimage" src="../../img/icon_profile.png" alt="user icon">
+                <div class="name_id">
+                    <div id="nomcomplet"><?php echo"{$Nom} {$Prenom}";?></div>
+                    <div id="iduser"><label for="id"><?php echo "#{$id}";?></label></div>
+                </div>
+            </div>
+            <div class="buttons">
+                <div class="naviguer">
+                    <a href="profile.php">
+                        <button id="selected">
+                            <img src="../../img/icon_profile.png" class="buttonimg">
+                            <label for="Profile">Profile</label>
+                        </button>
+                    </a>
+                    <a href="annoncesPart2.php">
+                        <button>
+                            <img src="../../img/portfolio.png" class="buttonimg">
+                            <label for="Annonces">Les offres</label>
+                        </button>
+                    </a>
+                    <a href="cv.php">
+                        <button>
+                            <img src="../../img/doc.png" class="buttonimg">
+                            <label for="cvs">Mon CV</label>
+                        </button>
+                    </a>
+                    <a href="messagesAcceuil.php">
+                        <button>
+                            <img src="../../img/chat.png" class="buttonimg">
+                            <label for="messages">Messages</label>
+                        </button>
+                    </a>
+                </div>
+                <div class="deconnexion">
+                    <a href="../../backend/logout.php">
+                        <button>
+                            Deconnexion
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <main>
+        <header>
+            <img id="headuserimg" src="../../img/icon_profile_black.png" alt="user icon">
+                <div class="headuserinfo">
+                    <p id="nomcomplet"><?php echo"{$Nom} {$Prenom}";?></p>
+                    <p id="id"><?php echo "#{$id}";?></p>
+                </div>
+        </header>
+        <form action="profile.php" method="post">
+            <div class="champ">
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" name="nom" value="<?php echo $Nom; ?>">
+            </div>
+            <div class="sexe champ">
+                <input type="radio" id="Male" value="Male" name="sexe">
+                <label for="sexe">Male</label>
+                <input type="radio" id="Female" value="Female" name="sexe">
+                <label for="sexe">Female</label>
+            </div>
+
+            <div class="champ">
+                <label for="prenom">Prenom</label>
+                <input type="text" id="prenom" name="prenom" value="<?php echo $Prenom; ?>">
+            </div>
+            <div class="champ">
+                <label for="daten">Date de naissance</label>
+                <input type="date" id="daten" name="daten" value="<?php echo $datenaissance; ?>">
+            </div>
+
+            <div class="champ">
+                <label for="telephone">Téléphone</label>
+                <input type="text" name="telephone" pattern="[0-9]+" value="<?php echo $telephone; ?>">
+            </div>
+            <div class="champ">
+                <label for="adresse">Adresse</label>
+                <input type="text" id="adresse" name="adresse" value="<?php echo $adresse; ?>">
+            </div>
+            
+            <div class="champ">
+                <label for="Email">Email</label>
+                <input type="Email" name="Email" value="<?php echo $email; ?>">
+            </div>
+
+            <div class="champ">
+                <label for="ville">Ville</label>
+                <input type="text" id="ville" name="ville" value="<?php echo $ville; ?>">
+            </div>
+
+            <div class="decision champ">
+                <button id="Modifier" value="Modifier">Modifier</button>
+                <input type="submit" name="Enregistrer" value="Enregistrer">
+            </div>
+
+        </form>
+    </main>
+
+    <script>
+        function usersexe(sexe) {
+            var Male = document.getElementById("Male");
+            var Female = document.getElementById("Female");
+            
+            if (sexe === "Male") {
+                Male.checked = true;
+            } else if (sexe === "Female") {
+                Female.checked = true;
+            }
+        }
+        usersexe("<?php echo $sexe; ?>");
+    </script>
+
+    <script>
+        function disableInputs() {
+            var inputs = document.getElementsByTagName("input");
+            for (var i = 0; i < inputs.length; i++) {
+                inputs[i].disabled = true;
+            }
+        }
+
+        function enableInputs() {
+            var inputs = document.getElementsByTagName("input");
+            for (var i = 0; i < inputs.length; i++) {
+                inputs[i].disabled = false;
+            }
+        }
+
+        disableInputs();
+
+        document.getElementById("Modifier").addEventListener("click", function (event) {
+            event.preventDefault();
+            enableInputs();
+        });
+
+        document.getElementById("Enregistrer").addEventListener("click", function () {
+            document.forms[0].submit();
+            disableInputs();
+        });
+    </script>
+</body>
+</html>

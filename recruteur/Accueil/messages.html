@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages</title>
+    <link rel="stylesheet" href="style_prem.css">
+    <link rel="stylesheet" href="messages.css">
+    <link rel="icon" href="../../img/JOBNET.png" />
+</head>
+<body>
+    <div class="nav-container">
+        <nav>
+            <div class="user">
+                <img id="usernavimage" src="../../img/icon_profile.png" alt="user icon">
+                <div class="name_id">
+                    <div id="nomcomplet"> <!--JSgetnamefunction-->Mr. SEHLAOUI ACHRAF</div>
+                    <div id="iduser"><label for="id">#12345</label></div>
+                </div>
+            </div>
+            <div class="buttons">
+                <a href="profile.php"><button>
+                    <img src="../../img/icon_profile.png" class="buttonimg">
+                    <label for="Profile">Profile</label>
+                </button></a>
+                <a href="annoncesPart2.php"><button>
+                    <img src="../../img/portfolio.png" class="buttonimg">
+                    <label for="Annonces">Annonces</label>
+                </button></a>
+                <a href="cvs.php"><button>
+                    <img src="../../img/doc.png" class="buttonimg">
+                    <label for="Profile">CVs</label>
+                </button></a>
+                <a href="messagesAcceuil.php"><button id="selected">
+                    <img src="../../img/chat.png" class="buttonimg">
+                    <label for="Profile">Messages</label>
+                </button></a>
+            </div>
+        </nav>
+    </div>
+    <main>
+        <div>
+            <div id="l">
+                <div id="Recherche">
+                    <form>
+                        <div id="msg"><label><b>Messages</b></label></div>
+                        <input type="text" id="rechinput" placeholder="Recherche">
+                    </form>
+                </div>
+                <div id="users">
+                    
+                </div>
+            </div>
+            <div id="r">
+                <div id="user">
+                    <img id="imguser" src="../../img/icon_profile_black.png" alt="user icon">
+                    <div class="name_id">
+                        <div id="nomcomplet"> <!--JSgetnamefunction-->Mr. SEHLAOUI ACHRAF</div>
+                    </div>
+                    <button id="cv">CV</button>
+                    <p id="userProfile">sehlaoui.achraf@gmail.com - Licence en génie informatique</p>
+                </div>
+                <div id="Messags">
+                    
+                </div>
+                <div id="Messag">
+                    <form>
+                        <input id="Message" type="text" placeholder="Message">
+                        <input type="submit" id="send" value="envoie">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

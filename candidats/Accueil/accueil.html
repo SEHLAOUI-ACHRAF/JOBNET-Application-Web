@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    <link rel="stylesheet" href="../../recruteur/Accueil/style_prem.css">
+    <link rel="stylesheet" href="../../recruteur/Accueil/_accueil.css">
+    <link rel="icon" href="../../img/JOBNET.png" />
+</head>
+<body>
+    <div class="nav-container">
+        <nav>
+            <div class="user">
+                <img id="usernavimage" src="../../img/icon_profile.png" alt="user icon">
+                <div class="name_id">
+                    <div id="username"><?php echo"{$nom} {$prenom}";?></div>
+                    <div id="userid"><label for="id"><?php echo "#{$id}";?></label></div>
+                </div>
+            </div>
+            <div class="buttons">
+                <a href="profile.php">
+                    <button>
+                        <img src="../../img/icon_profile.png" class="buttonimg">
+                        <label for="Profile">Profile</label>
+                    </button>
+                </a>
+                <a href="annoncesPart2.php">
+                    <button>
+                        <img src="../../img/portfolio.png" class="buttonimg">
+                        <label for="Annonces">Les offres</label>
+                    </button>
+                </a>
+                <a href="cv.php">
+                    <button>
+                        <img src="../../img/doc.png" class="buttonimg">
+                        <label for="mon cv">Mon CV</label>
+                    </button>
+                </a>
+                <a href="messagesAcceuil.php">
+                    <button>
+                        <img src="../../img/chat.png" class="buttonimg">
+                        <label for="messages">Messages</label>
+                    </button>
+                </a>
+            </div>
+        </nav>
+    </div>
+    <main>
+        <div class="bloc">
+            <h1>WELCOM TO <b>JOBNET</b></h1>
+            <p>connect to the future</p>
+        </div>
+    </main>
+    <script src="accueil.js"></script>
+</body>
+</html>

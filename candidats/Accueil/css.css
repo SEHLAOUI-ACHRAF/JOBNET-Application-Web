@@ -1,0 +1,67 @@
+/* Style pour le titre principal */
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Style pour les sous-titres */
+h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Style pour les paragraphes */
+p {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* Style pour les informations générales */
+p.profession {
+    font-weight: bold;
+}
+
+/* Style pour les diplômes */
+p.diplome {
+    font-style: italic;
+}
+
+/* Style pour les stages */
+p.stage {
+    font-style: italic;
+}
+
+/* Style pour les expériences professionnelles */
+p.experience {
+    font-style: italic;
+}
+
+/* Style pour les certificats */
+p.certificat {
+    font-style: italic;
+}
+
+/* Style pour les autres informations */
+p.autre {
+    font-style: italic;
+}
+
+/* Style pour le conteneur principal */
+#utilisateur-header {
+    margin-left: 30px;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+body{
+    text-align: center;
+    margin: 10px;
+}

@@ -1,0 +1,146 @@
+#l{
+    width: 62dvb;
+    height: 100dvb;
+    background-color: #F9F9F9;
+    display: block;
+    text-align: center;
+}
+#r{
+    margin-left: 40%;
+    margin-top: -100dvh;
+    width: 90.5dvh;
+    height: 100dvh;
+    background-color: white;
+    border: 0.5px #848E99 solid;
+    display: block;
+    align-self: center;
+    text-align: center;
+}
+#userInfo{
+    background-color: #F9F9F9;
+    height: 130px;
+}
+#Recherche{
+    height: 23%;
+}
+#rechinput{
+    width: 80%;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #7676802e;
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-left: -30px;
+}
+#users{
+    padding-top: 10px;
+    margin-top: 17px;
+    height: 82dvb;
+    background-color: #DEDEDE;
+    overflow: auto;
+}
+#msg{
+    padding-top: 80px;
+    font-size: 1.7em;
+    color: #333333;
+    margin-left: -240px;
+    font-family: Geneva, Tahoma, sans-serif;
+}
+#cv{
+    width: 150px;
+    height: 20px;
+    justify-self: center;
+    border-radius: 20px;
+    border: none;
+    background-color: #848E99;
+    color: #F9F9F9;
+    margin-top: 10px;
+}
+#user{
+    height: 23%;
+    background-color: #FDFDFD;
+    display: block;
+    border: 0.5px #b2b2b2 solid;
+    font-size: 0.8em;
+}
+#Messags{
+    height: 70%;
+    background-color: #ffffff;
+    display: block;
+}
+#Messag{
+    height: 7%;
+    display: block;
+    background-color: #FDFDFD;
+    border: 0.5px #b2b2b2 solid;
+}
+#Message{
+    width: 80%;
+    margin: 10px;
+    height: 30px;
+    border-radius: 5px;
+    border: 0.5px #b2b2b2 solid;
+    padding-left: 15px;
+}
+#send{
+    width: 60px;
+    text-align: center;
+    height: 30px;
+    border-radius: 5px;
+    border: 0.5px #848E99 solid;
+}
+#imguser{
+    width: 80px;
+}
+#Envoyer{
+    margin-bottom: 10px;
+}
+#userBlock{
+    display: block;
+    border: 1px #63636379 solid;
+    height: 40px;
+    width: 400px;
+    margin: auto;
+    margin-top: 10px;
+    background-color: #F9F9F9;
+    padding-top: 10px;
+    border-radius: 10px;
+    color: #333333;
+}
+a{
+    text-decoration: none;
+}
+#msguser{
+    font-size: small;
+}
+#Conversations{
+    height: 67dvb;
+    border: 1px rgb(202, 202, 202) solid;
+    text-align: center;
+    padding: auto;
+    overflow: auto;
+}
+#messageb{
+    width: 600px;
+    height: 50px;
+    padding: auto;
+    border-radius: 5px;
+    margin-top: 0%;
+    margin-top: 10px;
+}
+#envoyerb{
+    width: 200px;
+    height: 40px;
+    padding: auto;
+    color: rgb(255, 255, 255);
+    background-color: #003465;
+    border-radius: 20px;
+    margin-top: 0%;
+}
+#envoyerb:hover{
+    background-color: #0a437b;
+}
+#envoyerb:active{
+    background-color: #3d79b5;
+}

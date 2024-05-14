@@ -1,0 +1,89 @@
+body {
+    background-color: #F8F8F8;
+}
+.block {
+    background-color: #fff;
+    width: 850px;
+    margin: 15px auto;
+    padding: 20px;
+    padding-left: 70px;
+    padding-right: 70px;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h2 {
+    font-family: JAVATA;
+    color: #18A0FB;
+    font-size: 2em;
+}
+b{
+    color: #003465;
+    font-size: 0.7em;
+}
+h3 {
+    color: #292929;
+    font-family: Arial;
+    font-weight: bold;
+}
+label {
+    color: #1d1d1d;
+    font-family: Arial;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    padding-left: 20px;
+}
+button {
+    width: 100%;
+    background-color: #003465;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+    font-weight: 530;
+}
+a {
+    color: #18A0FB;
+    text-decoration: none;
+}
+p{
+    text-align: center;
+    font-family: Arial;
+    font-weight: bold;
+}
+.right{
+    padding-left: 50px;
+}
+td{
+    width: 400px;
+}
+.sexe {
+    margin-top: 30px;
+    display: inline-block;
+    width: auto;
+    margin-right: 10px;
+}
+input[type="radio"] {
+    margin-right: 5px;
+}
+#space{
+    margin-left: 50px;
+}
+#passwordError{
+    color: red;
+    font-size: small;
+    font-family: serif;
+    padding-left: 10px;
+}

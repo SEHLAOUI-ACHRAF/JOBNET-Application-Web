@@ -1,0 +1,107 @@
+main{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    box-sizing: border-box;
+}
+main header{
+    background-color: #E1E1E1;
+    width: 100%;
+    height: 20vh;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+header img{
+    float: left;
+    margin: 10px 20px;
+}
+#headernomcomplet{
+    font-size: 2em;
+}
+#headeriduser{
+    font-size: 1.5em;
+    color:rgb(46, 46, 46);
+}
+main p{
+    font-size: 1.7em;
+    margin-top: 20px;
+}
+#id{
+    font-size: 1em;
+    margin-top: -20px;
+}
+#headuserimg{
+    width: 150px;
+    padding: 10px;
+}
+main label{
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+form{
+    margin: 10vh 20px 0px 20px;
+}
+form input[type=text], input[type=email], input[type=date] {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding-left: 15px;
+}
+.champ{
+    width: 50%;
+    height: 70px;
+    float: left;
+    padding: 0px 20px 0px 20px;
+}
+#Female{
+    margin-left: 20px;
+}
+form label{
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 0px;
+}
+.sexe{
+    width: 50%;
+    height: 70px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+.decision{
+    height: 40px;
+    margin: 20px 30px 1px 1px;
+}
+.decision input{
+    width: 150px;
+    height: 40px;
+    color: rgb(255, 255, 255);
+    background-color: #BCBEC0;
+    border-radius: 8px;
+    font-size: 1em;
+    border: none;
+}
+.decision input:hover{
+    background-color: #e1e1e1;
+}
+.decision input:active{
+    background-color: #f0f0f0;
+}
+#Modifier{
+    width: 150px;
+    height: 40px;
+    color: rgb(255, 255, 255);
+    background-color: #003465;
+    margin-top: 100px;
+    border-radius: 8px;
+    font-size: 1em;
+    border: none;
+}
+#Modifier:hover{
+  background-color: #0a437b;
+}
+#Modifier:active{
+  background-color: #3d79b5;
+}

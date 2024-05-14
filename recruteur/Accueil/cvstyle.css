@@ -1,0 +1,79 @@
+header{
+    background-color: #F5F5F5;
+    padding: 40px;
+    border-bottom: #BCBEC0 solid 1px;
+}
+
+nav{
+  font-family: sans-serif;
+}
+
+.filtreContain{
+    width: 100%;
+    display: grid;
+    grid-template-columns:auto auto auto;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+select{
+    margin: 4px auto auto 5px;
+    font-size: 18px;
+    border: 1px solid #BCBEC0;
+    border-radius: 10px;
+    padding: 7px 10px;
+    width: 300px;
+}
+.score{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+main label{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+main input[type='number']{
+    width: 50px;
+    border-radius: 10px;
+    padding: 5px;
+    margin-left: 4px;
+    border: 1px solid #BCBEC0;
+  }
+
+  .cvs-container{
+    padding: 20px;
+    background-color: #F8F8F8;
+    border: 0.5px solid rgba(128, 128, 128, 0.479);
+    border-radius: 20px;
+    width: 760px;
+    margin: auto;
+    margin-top: 20px;
+  }
+  .cv-header,.cv-footer,.util{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #id,#nom-utilisateur{
+    margin:0;
+    padding: 0;
+  }
+  .cv-info{
+    margin: 20px;
+  }
+  .green{
+    color: #3A9A00;
+  }
+  .detail{
+    color: white;
+    background-color: #18A0FB;
+    padding: 10px 20px;
+    border:none;
+    border-radius: 25px;
+  }

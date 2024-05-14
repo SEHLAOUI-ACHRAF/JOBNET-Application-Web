@@ -1,0 +1,115 @@
+*{
+  box-sizing: border-box;
+}
+main{
+  overflow: auto;
+}
+body{
+  margin: 0;
+  background-color: #F8F8F8;
+  font-family: sans-serif;
+}
+.nav-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 100%;
+  display: block;
+  min-width: 200px;
+  margin: 0;
+  background-color: #003465;
+  color: white;
+}
+.user{
+  margin: 20px 30px 70px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.user img{
+  width: 75px;
+  float: left;
+  margin-right: 10px;
+}
+.user .name_id{
+  display: flex;
+  flex-direction: column;
+}
+#iduser{
+  font-size: 0.8em;
+  color: rgb(172, 172, 172);
+  margin-top: 5px;
+}
+.buttons{
+  margin: 20px 40px;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9em;
+}
+.nav-container button{
+  background-color: #003465;
+  width: 100%;
+  height: 50px;
+  text-align: left;
+  border: 0.5px solid white;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.nav-container button:hover{
+  background-color: #0a437b;
+}
+.nav-container button:active{
+  background-color: #3d79b5;
+}
+.buttonimg{
+  height: 30px;
+  margin: 0 10px;
+}
+#selected{
+  background-color: #6AC3FF;
+}
+#selected:active{
+  background-color: #9bd7ff;
+}
+.deconnexion button{
+  margin-bottom: -20px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #FB6A18;
+  justify-content: center;
+  border: none;
+}
+.deconnexion{
+  margin-top: auto;
+}
+.deconnexion button:hover{
+  background-color: #fe9051;
+}
+.deconnexion button:active{
+  background-color: #ffc7a6;
+}
+.nav-container a{
+  text-decoration: none;
+}
+.nav-container a:visited{
+  color:white;
+  text-decoration: none;
+}
+.nav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 100%;
+}
+main {
+  margin-left: 320px;
+}
+.bloc {
+  padding: 20px;
+}

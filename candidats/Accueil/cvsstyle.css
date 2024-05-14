@@ -1,0 +1,133 @@
+
+  @font-face {
+    font-family: Acetone;
+    src: url(fonts/ACETONE.ttf);
+}
+  .utilisateur-header{
+    position: fixed;
+    width: 100%;
+    height: 145px;
+    background-color: #E1E1E1;
+    font-size: 25px;
+  }
+  .utilisateur-header>div{
+    display: flex;
+    justify-content: flex-start;
+    margin: 25px;
+    align-items: center;
+  }
+
+  .profile-icon{
+    width: 80px;
+    height: 80px;    
+  }
+
+  #id,#nom-utilisateur{
+    margin:0;
+    padding: 0;
+  }
+  
+  main p{
+    margin: 10px auto 0px 0px;
+  }
+ .container{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 8rem auto 4rem auto;
+      max-width: 800px;
+      padding: 20px;
+  }
+ 
+ h3{
+    text-align: center;
+    font-weight: bold;
+ }
+  .mcontainer{
+    width:70rem;
+    display: grid;
+    grid-template-columns:auto auto auto;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #F8F8F8;
+    border: 0.5px solid rgba(128, 128, 128, 0.479);
+    border-radius: 10px;
+  }
+
+  section{
+    margin-top: 40px;
+  }
+
+  input,select{
+    margin: 4px auto auto 5px;
+    font-size: 18px;
+    border: 1px solid #BCBEC0;
+    border-radius: 10px;
+    padding: 7px 10px;
+    width: 300px;
+  }
+  .langue{
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  main label{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  #submit{
+    margin-top: 20px;
+    height: 45px;
+    font-size: 19px;
+    color: white;
+    background-color: #003465;
+    cursor: pointer;
+  }
+  #modifier{
+    width: 30%;
+    margin-left: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  a{
+    text-decoration: none;
+  }
+  .mb-3{
+    width: 300px;
+    margin-left: 22rem;
+    display: flex;
+    justify-content: space-evenly;
+    width: 300px;
+  }
+  .mb-3 > button{
+    height: 50px;
+  }
+  .submitForm{
+    margin-top: 20px 3px;
+  }
+  form{
+    width: 100dvb;
+  }
+  
+/* .btn-warning{
+  padding: 2rem;
+  background-color: #ffc100;
+  border: 0;
+  overflow: hidden;
+  }
+
+.btn-warning input[type="File"]{
+  cursor: pointer;
+  right: 0;
+  top: 0;
+  transform: scale(3);
+  opacity: 0%;
+} */
+
+main{
+  text-align: center;
+}

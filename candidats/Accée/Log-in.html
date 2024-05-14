@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOBNET</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" href="../../img/JOBNET.png">
+</head>
+<body>
+    <div>
+        <div class="block">
+            <a href="../../index.html"><button id="home"></button></a>
+            <h2>JOBNET<b>CANDIDAT</b></h2>
+            <h3>Se connecter</h3>
+            <form action="../../backend/Log-in.php" method="post">
+                <label>Email</label><br>
+                <input type="email" name="email" placeholder="Enter your email" required><br>
+                <label>Mot de passe</label><br>
+                <input type="password" name="password" placeholder="Enter your password" required><br>
+                <button id="seconnecter" name="loginCandidat" type="submit">Se connecter</button>
+                <p>Vous n'avez pas de compte? <a id="Inscrivez-vous" href="Inscr.html">Inscrivez-vous</a></p>
+            </form>
+        </div>
+    </div>
+    <script>
+        window.onload = function() {
+            var urlParams = new URLSearchParams(window.location.search);
+            var message = urlParams.get('message');
+            
+            if (message) {
+                alert(message);
+            }
+        };
+    </script>
+</body>
+</html>

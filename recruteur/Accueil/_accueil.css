@@ -1,0 +1,30 @@
+@font-face {
+    font-family: JAVATA;
+    src: url(../../fonts/JAVATA.ttf);
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.bloc h1{
+    font-family: JAVATA;
+    font-size: 3em;
+    text-align: center;
+    margin-top: 5%;
+    margin: 0;
+}
+.bloc b{
+    color: #18A0FB;
+}
+p{
+    font-size: 1.3em;
+}
+.bloc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    min-width: 300px;
+}
